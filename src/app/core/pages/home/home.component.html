@@ -1,0 +1,16 @@
+<div *ngIf="!_us.usuario.uid">
+
+    <p>Para comenzar, debe de iniciar sesion: </p>
+
+    <button class="btn btn-outline-danger" type="button" (click)="acceder()">Google</button>
+
+</div>
+
+
+<div *ngIf="_us.usuario.uid">
+
+    <p>Cerrar sesion: </p>
+
+    <button class="btn btn-outline-danger" type="button" (click)="salir()">Salir</button>
+
+</div>
