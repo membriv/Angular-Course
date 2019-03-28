@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'controlhorario';
+  public title = 'controlhorario';
+  public items: Observable<any[]>;
+
+  constructor(db: AngularFirestore) {
+    this.items = db.collection('items').valueChanges();
+  }
+
 }
