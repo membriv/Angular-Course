@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { ControlHorario } from 'src/app/interfaces/controlHorario.interface';
+import { User } from 'src/app/interfaces/user.interface';
 
 
 @Component({
@@ -15,13 +16,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._us.getControlesUsuarios()
-        .subscribe((res:ControlHorario[]) => console.log(res));
 
   }
 
   acceder(){
     this._us.login();
+
 
   }
 

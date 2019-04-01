@@ -9,10 +9,11 @@
 
 <div *ngIf="_us.usuario.uid">
 
+
+    <p>Hola {{_us.usuario.nombre}} !!</p>
+
     <p>Cerrar sesion: </p>
 
     <button class="btn btn-outline-danger" type="button" (click)="salir()">Salir</button>
 
 </div>
-
-{{_us.usuario.uid}}
