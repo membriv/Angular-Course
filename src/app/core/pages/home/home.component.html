@@ -1,19 +1,63 @@
-<div *ngIf="!_us.usuario.uid">
-
-    <p>Para comenzar, debe de iniciar sesion: </p>
-
-    <button class="btn btn-outline-danger" type="button" (click)="acceder()">Google</button>
-
-</div>
+<div class="container">
 
 
-<div *ngIf="_us.usuario.uid">
+    <div class="card" *ngIf="!_us.usuario.uid">
+        <div class="card-header">
+            ACCEDER
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Acceder con tu cuenta de google</h5>
+            <p class="card-text">¿Todavía no has accedido con tu cuenta de Google?</p>
+            <p>Para poder tener un completo control de tu tramo horario de trabajo, ¡¡ accede con solo un click !! </p>
+            <button class="btn btn-primary" type="button" (click)="acceder()">LOGIN</button>
+        </div>
+    </div>
+
+    <!--
+    <div *ngIf="!_us.usuario.uid">
+
+        <p>Para comenzar, debe de iniciar sesion: </p>
+
+        <button class="btn btn-outline-danger" type="button" (click)="acceder()">Google</button>
+
+    </div> -->
 
 
-    <p>Hola {{_us.usuario.nombre}} !!</p>
+    <!-- <div *ngIf="_us.usuario.uid">
 
-    <p>Cerrar sesion: </p>
+        <p>Cerrar sesion: </p>
 
-    <button class="btn btn-outline-danger" type="button" (click)="salir()">Salir</button>
+        <button class="btn btn-outline-danger" type="button" (click)="salir()">Salir</button>
+
+    </div> -->
+
+
+    <div class="row" *ngIf="_us.usuario.uid">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Información del aplicativo</h5>
+                    <p class="card-text">STATUS: BETA</p>
+                    <p> <b> Información: </b>El objetivo de este aplicativo y su funcionalidad no van más allá de obtener fines didácticos y no se muestra información real de ningún tipo. </p>
+                    <p>En el caso de que la aplicación presentasé algún tipo de error, será corregido en futuras versiones o lanzamiento de una versión estable.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Registrar Salida</h5>
+                    <p class="card-text"> Hola {{_us.usuario.nombre}}, recuerda pulsar el botón "SALIR" para dejar constancia del tramo horario de trabajo.</p>
+
+                    <p>¡Gracias!</p>
+
+                    <button class="btn btn-outline-danger" type="button" (click)="salir()">SALIR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 </div>

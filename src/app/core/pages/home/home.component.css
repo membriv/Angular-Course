@@ -1,0 +1,16 @@
+.container {
+    margin-top: 5%;
+}
+
+.card-header {
+    background-color: #3eb221;
+    color: white;
+    text-align: center;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    background-color: #3eb221 !important;
+}
